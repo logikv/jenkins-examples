@@ -52,7 +52,7 @@ pipeline {
                                 }
 
                                 sh """cd target
-                                      cp target/*.jar /opt/services/streaming/
+                                      cp *.jar /opt/services/streaming/
                                    """
                             }
                         }
