@@ -35,7 +35,7 @@ pipeline {
 
                         stage('build streaming') {
                             steps {
-                                git branch: params.BRANCH ,url: 'https://github.com/a-poliakov/streaming.git'
+                                git branch: params.BRANCH ,url: 'https://github.com/jenkins-examples-1/streaming'
 
                                 sh "git checkout ${params.BRANCH}"
 
