@@ -14,7 +14,7 @@ pipeline {
 
         stage('Build common libs') {
             steps {
-                git 'https://github.com/a-poliakov/common-libs.git'
+                git branch: params.BRANCH ,url: 'https://github.com/a-poliakov/common-libs.git'
 
                 sh "git checkout ${params.BRANCH}"
 
@@ -35,7 +35,7 @@ pipeline {
 
                         stage('build streaming') {
                             steps {
-                                git 'https://github.com/a-poliakov/streaming.git'
+                                git branch: params.BRANCH ,url: 'https://github.com/a-poliakov/streaming.git'
 
                                 sh "git checkout ${params.BRANCH}"
 
@@ -65,7 +65,7 @@ pipeline {
 
                         stage('build batching') {
                             steps {
-                                git 'https://github.com/a-poliakov/batching.git'
+                                git branch: params.BRANCH ,url: 'https://github.com/a-poliakov/batching.git'
 
                                 sh "git checkout ${params.BRANCH}"
 
