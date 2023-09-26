@@ -14,7 +14,7 @@ pipeline {
 
         stage('Build common libs') {
             steps {
-                git branch: params.BRANCH ,url: 'https://github.com/a-poliakov/common-libs.git'
+                git branch: params.BRANCH ,url: 'https://github.com/jenkins-examples-1/common-libs.git'
 
                 sh "git checkout ${params.BRANCH}"
 
