@@ -65,7 +65,7 @@ pipeline {
 
                         stage('build batching') {
                             steps {
-                                git branch: params.BRANCH ,url: 'https://github.com/a-poliakov/batching.git'
+                                git branch: params.BRANCH ,url: 'https://github.com/jenkins-examples-1/batching'
 
                                 sh "git checkout ${params.BRANCH}"
 
